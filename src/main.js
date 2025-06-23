@@ -23,8 +23,11 @@ function onYouTubeIframeAPIReady() {
     });
     document.getElementById('playButton1').addEventListener('click', () => {
       console.log('playButton1 clicked');
+      //Youtube IDを切り替える(動画を切り替える)
       player.loadVideoById({ videoId: "Pct1cehK4Tg" });
+      //ミュートを解除
       player.unMute();
+      //動画を再生
       player.playVideo();
     });
     document.getElementById('playButton2').addEventListener('click', () => {
