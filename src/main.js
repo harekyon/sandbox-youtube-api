@@ -16,13 +16,26 @@ window.addEventListener('load', () => {
 
 //メイン処理
 function onYouTubeIframeAPIReady() {
-    const player = new YT.Player('youtubeBox', {
+    let player = new YT.Player('youtubeBox', {
         videoId : 'IqKz0SfHaqI',
         width   : 480,
         height  : 270
     });
-    document.getElementById('playButton').addEventListener('click', () => {
-      console.log('playButton clicked');
+    document.getElementById('playButton1').addEventListener('click', () => {
+      console.log('playButton1 clicked');
+      player.loadVideoById({ videoId: "Pct1cehK4Tg" });
+      player.unMute();
+      player.playVideo();
+    });
+    document.getElementById('playButton2').addEventListener('click', () => {
+      console.log('playButton2 clicked');
+      player.loadVideoById({ videoId: "5D9JooJafeI" });
+      player.unMute();
+      player.playVideo();
+    });
+    document.getElementById('playButton3').addEventListener('click', () => {
+      console.log('playButton3 clicked');
+      player.loadVideoById({ videoId: "8n2w1XVCQno" });
       player.unMute();
       player.playVideo();
     });
